@@ -187,16 +187,6 @@ class neuralNetwork:
             layer.append(self.layerErrorList[-i])
         self.layerErrorList = layer
 
-    '''def trainit(self, inputDataset, outputDataset):
-        for i in range(len(inputDataset)):
-            self.getOutput(inputDataset[i])
-            self.backPropagate(outputDataset[i])
-            newWeight = []
-            for j in range(len(self.layerErrorList)):
-                for k in range(len(self.layerErrorList[j])):
-                    if(j==0):
-                        es = sign(self.layerErrorList[j][k])
-                        signmat = '''
     def recall(self, outputlist):
         outputlist = transpose(toMatrix(outputlist))
         revweight = []
